@@ -9,6 +9,21 @@ body{
     background-color: hsl(227, 75%, 14%);
     color: white;
 }
+
+.light{
+    background-color: hsl(217, 61%, 90%)!important;
+    color: black!important;
+}
+
+.light-header{
+    background-color: hsl(0, 0%, 100%)!important;
+    color: black!important;
+}
+
+.light-box > *{
+    background-color: hsl(0, 0%, 100%)!important;
+}
+
 header {
     background-color:hsl(225, 23%, 24%);
     margin-top: 30px!important;
