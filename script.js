@@ -7,7 +7,7 @@ async function fetchData() {
     try {
         const response = await fetch("data.json"); // Fetch JSON file
         const jsonData = await response.json(); // Convert to JavaScript object
-        renderCard(jsonData);
+        return jsonData;
     } catch (error) {
         console.error("Error fetching data:", error);
     }
@@ -51,10 +51,48 @@ function changeMode(e) {
         document.body.classList = [''];
         box.classList.remove('light-box');
         header.classList.remove('light-header');
-    }
-    
-    
+    }    
+}
+function removeActiveClass() {
+    document.querySelectorAll('.active').forEach(el => el.classList.remove('active'));
 }
 
+async function renderAll(e) {
+    removeActiveClass();
+    e?.classList.add('active');
+    
+    let data = await fetchData();  
+    box.innerHTML = '';
+    renderCard(data);
+}
 
-fetchData();
+async function renderActive(e) {
+    removeActiveClass();
+    e.classList.add('active');
+    
+    let data = await fetchData();  
+    data = data.filter(filterActive);
+    box.innerHTML = '';
+    renderCard(data);
+}
+
+async function renderInactive(e) {
+    removeActiveClass();
+    e.classList.add('active');
+    
+    let data = await fetchData();  
+    data = data.filter(filterInactive);
+    box.innerHTML = '';
+    renderCard(data);
+}
+
+function filterActive(item) {
+    return item.isActive;
+}
+
+function filterInactive(item) {
+    return !item.isActive;
+}
+
+active = document.getElementsByClassName('active')[0];
+renderAll(active);

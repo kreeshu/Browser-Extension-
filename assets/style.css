@@ -15,6 +15,10 @@ body{
     color: black!important;
 }
 
+.active{
+    background-color: hsl(3, 71%, 56%)!important;
+}
+
 .light-header{
     background-color: hsl(0, 0%, 100%)!important;
     color: black!important;
