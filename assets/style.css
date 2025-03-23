@@ -1,0 +1,224 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Courier New', Courier, monospace;
+    box-sizing: border-box;
+    font-family: "Noto Sans", sans-serif;
+}
+body{
+    background-color: hsl(227, 75%, 14%);
+    color: white;
+}
+header {
+    background-color:hsl(225, 23%, 24%);
+    margin-top: 30px!important;
+    border-radius: 10px;
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;    
+}
+#mode {
+    background-color: hsl(226, 11%, 37%);
+    padding: 0px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    margin-top: 30px;
+}
+.extension-list {
+    display: flex;
+    justify-content: space-between;
+
+}
+.selector button {
+    background-color:hsl(225, 23%, 24%);
+    border-radius: 15px;
+    padding: 7px 12px;
+    color: white !important; 
+    border: 1px solid hsl(217, 61%, 90%);
+    cursor: pointer;
+}
+.selector button:hover {
+    background-color: hsl(3, 71%, 56%);
+    color: black!important;
+}
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    width: 31%;
+    border: 1px solid hsl(204, 5%, 81%);
+    border-radius: 10px;
+    background-color: hsl(225, 23%, 24%);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.first {
+    display: flex;
+    align-items: flex-start;
+}
+
+.first img{
+    padding-right: 20px;
+}
+
+.second button {
+    border:1px solid hsl(204, 5%, 81%);
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color:  hsl(225, 23%, 24%);
+    color: white;
+}
+.second button:hover{
+    background-color:  hsl(3, 71%, 56%);
+    cursor: pointer;
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  hsl(3, 71%, 56%);;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px  hsl(3, 71%, 56%);;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 23px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color:  hsl(3, 71%, 56%);;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px  hsl(3, 71%, 56%);;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+.second{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+@media screen and (max-width:480px) {
+    .card{
+        width: 100%;
+    }
+    .extension-list{
+        flex-direction: column;
+        text-align: center;
+    }
+}
